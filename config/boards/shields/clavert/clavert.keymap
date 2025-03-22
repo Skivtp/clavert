@@ -21,7 +21,39 @@
     quick-release;
     /delete-property/ ignore-modifiers;
   };
+{
+    behaviors {
+        rush: rush {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RUSH";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp LEFT_BRACKET>;
+        };
 
+        rusm: rusm {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RUSM";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp RIGHT_BRACKET>;
+        };
+
+        shiftcaps: shiftcaps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTCAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <13>;
+            tapping-term-ms = <200>;
+        };
+    };
   / {
     keymap {
       compatible = "zmk,keymap";
