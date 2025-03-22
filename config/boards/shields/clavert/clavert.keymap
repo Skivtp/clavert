@@ -21,7 +21,7 @@
     quick-release;
     /delete-property/ ignore-modifiers;
   };
-{
+ / {
     behaviors {
         rush: rush {
             compatible = "zmk,behavior-tap-dance";
@@ -54,7 +54,7 @@
             tapping-term-ms = <200>;
         };
     };
-  / {
+ {
     keymap {
       compatible = "zmk,keymap";
         default_layer {
