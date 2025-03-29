@@ -80,7 +80,7 @@ tap-ms = <5>;
    &to 4     &kp LALT &kp LGUI  &mo 3      &kp DEL    &kp BSPC     &kp SPACE                       &kp DEL  &kp SPACE       &mo 2      &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
           >;
 
-           sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN>;
+           sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DOWN>;
 //sensor-bindings = <&scroll_up_down>;
         };
 
@@ -99,7 +99,7 @@ tap-ms = <5>;
    &trans  &trans    &trans    &trans          &trans        &trans &trans                                               &trans        &kp N0          &mo 3            &trans    &trans    &trans      &trans
           >;
 
-          sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN>;
+          sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DOWN>;
         };
 
         nav_layer {
