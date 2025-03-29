@@ -46,7 +46,11 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-
+            scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+	          compatible = "zmk,behavior-sensor-rotate";
+          	#sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+       };
         new_behavior: new_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "NEW_BEHAVIOR";
@@ -75,7 +79,7 @@
    &to 4     &kp LALT &kp LGUI  &mo 3      &kp DEL    &kp BSPC     &kp SPACE                       &kp DEL  &kp SPACE       &mo 2      &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
           >;
 
-          sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN>;
+          sensor-bindings = <&scroll_up_down>;
         };
 
         mac_layer {
