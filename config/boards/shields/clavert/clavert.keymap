@@ -50,7 +50,7 @@
 	          compatible = "zmk,behavior-sensor-rotate";
           	#sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-tap-ms = <5>;
+//tap-ms = <5>;
        };
         new_behavior: new_behavior {
             compatible = "zmk,behavior-hold-tap";
@@ -74,9 +74,9 @@ tap-ms = <5>;
 // | LtNUM LEFT | RIGHT | LALT | LGUI | SPACE     | BSPC     | LtNAV END |  | LtNAV PG_DN | DEL      | ENTER     | [   | ]   | UP  | DOWN  |
           bindings = <
    &kp ESC   &kp N1   &kp N2   &kp N3 &kp N4   &kp N5 &kp N6                                     &kp N7 &kp N8    &kp N9   &kp N0   &kp BSPC
-   &kp TAB   &kp Q    &kp W    &kp E  &kp R    &kp T  &kp LPAR                                   &kp RPAR  &kp Y     &kp U  &kp I     &kp O    &kp P    &kp MINUS
+   &kp TAB   &kp Q    &kp W    &kp E  &kp R    &kp T  &kp SCRL_UP                                   &kp SCRL_DOWN  &kp Y     &kp U  &kp I     &kp O    &kp P    &kp MINUS
    &shiftcaps &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G  &kp LBKT     &kp RBKT     &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
-   &kp LSHFT &kp Z    &kp X    &kp C  &kp V    &kp B  &mo 1 &mo 2                        &kp HOME &kp END   &kp N     &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
+   &kp LSHFT &kp Z    &kp X    &kp C  &kp V    &kp B  &mo 1 &mo 2                       &mo 1 &mo 2   &kp N     &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
    &to 4     &kp LALT &kp LGUI  &mo 3      &kp DEL    &kp BSPC     &kp SPACE                       &kp DEL  &kp SPACE       &mo 2      &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
           >;
 
@@ -147,9 +147,9 @@ tap-ms = <5>;
 // | trans | trans | trans | trans | trans              | trans | trans |  | trans | trans | trans               | REWIND | FASTFWR | trans | trans |
           bindings = <
 &kp ESC   &kp N1   &kp N2   &kp N3 &kp N4   &kp N5                                            &kp N6    &kp N7 &kp N8    &kp N9   &kp N0   &kp BSPC
-   &kp TAB   &kp Q    &kp E    &kp W  &kp R    &kp F  &kp E                                   &kp RPAR  &kp Y     &kp U  &kp I     &kp O    &kp P    &kp MINUS
-   &shiftcaps &kp A  &kp A  &kp S  &kp D  &kp G  &kp LBKT     &kp RBKT     &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
-   &kp LSHFT &kp Z    &kp X    &kp C  &kp V    &kp B  &kp M  &kp LCTRL                        &kp HOME &kp END   &kp N     &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
+   &kp TAB   &kp Q    &kp W    &kp E  &kp R    &kp E  &kp F                                   &kp RPAR  &kp Y     &kp U  &kp I     &kp O    &kp P    &kp MINUS
+   &shiftcaps &kp LCTRL  &kp A  &kp W  &kp D  &kp LSHFT  &kp LBKT     &kp RBKT     &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &kp LSHFT &kp Z    &kp X    &kp S  &kp V    &kp B  &kp M  &kp LCTRL                        &kp HOME &kp END   &kp N     &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
    &to 0     &kp LALT &kp LGUI  &mo 3      &kp LCTRL    &kp LSHFT    &kp SPACE                       &kp DEL  &kp SPACE       &mo 2      &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
           >;
 
