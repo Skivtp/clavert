@@ -106,7 +106,7 @@
           bindings = <
    &trans  &trans     &trans   &trans   &kp LPAR   &kp RPAR                                                         &trans    &trans    &trans    &trans   &trans    &trans
    &trans &trans  &trans  &trans  &kp MINUS &kp PLUS &trans                                                           &trans  &trans &trans &trans &trans &trans &trans
-   &trans   &trans &trans &trans &trans &trans  &trans                                                           &trans  &trans &trans &trans &trans &trans &trans
+   &trans   &trans &trans &trans &kp UP_ARROW &trans  &trans                                                           &trans  &trans &trans &trans &trans &trans &trans
    &trans   &trans &trans  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW &trans &trans                       &trans &trans  &trans &trans &trans &trans &trans &trans
    &trans  &trans    &trans   &trans        &trans         &trans  &trans                                        &trans &trans        &trans       &trans    &trans   &trans    &trans
           >;
