@@ -85,7 +85,7 @@
           >;
 
           // sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
-             sensor-bindings = <&inc_dec_kp U_WH_U U_WH_D>;
+             sensor-bindings = <&inc_dec_msc U_WH_U U_WH_D>;
         };
 
         mac_layer {
@@ -103,7 +103,7 @@
   &trans   &kp N0   &kp N9         &trans          &trans        &trans &trans                                               &trans        &kp N0          &mo 3            &trans    &trans    &trans      &trans
           >;
 
-          sensor-bindings = <&inc_dec_kp U_WH_L U_WH_R>;
+          sensor-bindings = <&inc_dec_msc U_WH_L U_WH_R>;
         };
 
         nav_layer {
