@@ -84,8 +84,8 @@
    &to 4     &kp LALT &kp LGUI  &mo 3      &kp DEL    &kp BSPC     &kp SPACE                       &kp RET  &kp SPACE       &kp ESC      &mo 3  &mo 4 &kp RET   &kp RET
           >;
 
-          // sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
-             sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DOWN>;
+          sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+             // sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DOWN>;
         };
 
         mac_layer {
@@ -103,7 +103,7 @@
   &trans   &kp N0   &kp N9         &trans          &trans        &trans &trans                                               &trans        &kp N0          &mo 3            &trans    &trans    &trans      &trans
           >;
 
-          sensor-bindings = <&inc_dec_kp SCRL_LEFT SCRL_RIGHT>;
+        sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         nav_layer {
