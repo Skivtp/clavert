@@ -29,7 +29,7 @@
 #define U_WH_R &msc SCRL_RIGHT
   
   &sk {
-    release-after-ms = <2000>;
+    release-after-ms = <200>;
     quick-release;
     /delete-property/ ignore-modifiers;
   };
