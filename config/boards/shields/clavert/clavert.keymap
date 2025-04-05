@@ -90,7 +90,7 @@
    &to 4     &kp LALT &kp LGUI  &mo 3      &kp DEL    &kp BSPC     &kp SPACE                       &kp RET  &kp SPACE       &kp ESC      &mo 3  &mo 4 &kp RET   &kp RET
           >;
 
-          sensor-bindings = <&inc_dec_kp rot_msc>;
+          sensor-bindings = <&rot_msc>;
              // sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DOWN>;
         };
 
