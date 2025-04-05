@@ -39,7 +39,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <500>;
+            tap-ms = <50>;
                 };
         rush: rush {
             compatible = "zmk,behavior-tap-dance";
