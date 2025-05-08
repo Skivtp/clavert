@@ -14,20 +14,6 @@
   #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 
-  #define DEFAULT 0
-  #define MAC 1
-  #define NAV 2
-  #define NUM 3
-  #define FN 4
-#define U_MS_U &mmv MOVE_UP
-#define U_MS_D &mmv MOVE_DOWN
-#define U_MS_L &mmv MOVE_LEFT
-#define U_MS_R &mmv MOVE_RIGHT
-#define U_WH_U &msc SCRL_UP
-#define U_WH_D &msc SCRL_DOWN
-#define U_WH_L &msc SCRL_LEFT
-#define U_WH_R &msc SCRL_RIGHT
-  
   &sk {
     release-after-ms = <200>;
     quick-release;
@@ -57,26 +43,13 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
            
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <13>;
-            tapping-term-ms = <200>;
-        };
+       
     };
  
     keymap {
       compatible = "zmk,keymap";
         default_layer {
-// -----------------------------------------------------------------------------------------------------------------------------------------
-// | GRAVE      | 1     | 2    | 3    | 4   | 5   |                                                  | 6   | 7   | 8   | 9   | 0   | -     |
-// | TAB        | Q     | W    | E    | R   | T   | ESC      |                            | ESC      | Y   | U   | I   | O   | P   | =     |
-// | LCTRL      | A     | S    | D    | F   | G   | LS(LALT) |                            | \        | H   | J   | K   | L   | ;   | '     |
-// | LSHFT      | Z     | X    | C    | V   | B   | LtFN DEL | HOME      |  | PG_UP       | LtFN F12 | N   | M   | ,   | .   | /   | RSHFT |
-// | LtNUM LEFT | RIGHT | LALT | LGUI | SPACE     | BSPC     | LtNAV END |  | LtNAV PG_DN | DEL      | ENTER     | [   | ]   | UP  | DOWN  |
+
           bindings = <
                                            
    &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
@@ -90,12 +63,7 @@
         };
 
         mac_layer {
-// ------------------------------------------------------------------------------------------------------------------------------------
-// | trans | trans | trans | trans | trans | trans |                                  | trans | trans | trans | trans | trans | trans |
-// | trans | trans | trans | trans | trans | trans | trans |                  | trans | trans | trans | trans | trans | trans | trans |
-// | LGUI  | trans | trans | trans | trans | trans | CAPS  |                  | trans | trans | trans | trans | trans | trans | trans |
-// | trans | trans | trans | trans | trans | trans | trans | trans |  | trans | trans | trans | trans | trans | trans | trans | trans |
-// | trans | trans | trans | LCTRL | trans         | trans | trans |  | trans | trans | trans         | trans | trans | trans | trans |
+
           bindings = <
    &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
    &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
@@ -108,14 +76,9 @@
         };
 
         nav_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// | trans  | trans  | trans  | trans  | trans  | trans |                                  | trans  | HOME | INS  | PG_UP | trans  | trans  |
-// | trans | trans  | trans  | trans  | trans  | trans | trans |                  | trans | trans  | END  | UP   | PG_DN | trans  | trans  |
-// | trans | trans  | trans  | trans  | trans  | trans | CAPS  |                  | PSCRN | trans  | LEFT | DOWN | RIGHT | trans  | trans  |
-// | trans | trans  | trans  | trans  | trans  | trans | trans | trans |  | TgMAC | trans | trans  | trans | trans | trans  | trans  | trans  |
-// | trans | trans | trans | trans | trans        | trans | trans |  | trans | trans | trans        | trans | trans  | trans | trans |
+
           bindings = <
-     &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
    &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
@@ -125,14 +88,9 @@
         };
 
         num_layer {
-// -------------------------------------------------------------------------------------------------------------------------------
-// | trans  | trans | trans  | trans  | trans  | trans |                                  | trans  | NUMLOCK | /   | *   | -     | trans |
-// | trans | trans | trans  | trans  | trans  | trans | trans |                  | trans | trans  | 7       | 8   | 9   | +     | trans |
-// | trans | trans | trans  | trans  | trans  | trans | trans  |                  | trans  | trans  | 4       | 5   | 6   | +     | trans |
-// | trans | trans | trans  | trans  | trans  | trans | trans | trans |  | trans | trans | trans  | 1       | 2   | 3   | ENTER | trans |
-// | trans | trans | trans | trans | trans        | trans | trans |  | trans | trans | trans           | 0   | .   | ENTER | trans |
+
           bindings = <
-      &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
    &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
@@ -143,17 +101,12 @@
         };
 
         fn_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-// | trans  | F1   | F2    | F3    | F4    | F5         |                                  | F6         | F7     | F8     | F9      | F10  | F11  |
-// | trans | trans | {     | }     | trans  | trans       | trans |                  | trans | trans       | BT_CLR | BT_PRV | BT_NXT  | trans | F12  |
-// | trans | trans | (     | )     | trans  | trans      | trans  |                  | trans  | trans      | trans   | trans   | trans    | trans | PLAY |
-// | trans | trans | [     | ]     | trans  | bootloader | trans | trans |  | trans | trans | bootloader | trans   | trans   | trans    | trans | trans |
-// | trans | trans | trans | trans | trans              | trans | trans |  | trans | trans | trans               | REWIND | FASTFWR | trans | trans |
+
           bindings = <
-  &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
-   &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &TAB       &kp A  &kp S  &kp D  &kp F  &kp G       &kp H    &kp J  &kp K  &kp L  &kp SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
-   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
+   &to 0      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
                               &kp X           &kp C                                      &kp X           &kp C
           >;
 
