@@ -107,7 +107,7 @@
    &kp TAB       &kp A  &kp A  &kp W  &kp D  &kp G       &kp H    &kp J  &kp K  &kp L  &kp SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp S        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 0      &kp LALT        &kp E      &kp LEFT_SHIFT                                    &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp LEFT_SHIFT           &kp SPACE                                      &kp LCTRL         &kp SPACE 
+                              &kp LCTRL           &kp SPACE                                      &kp LCTRL         &kp SPACE 
           >;
 
           
