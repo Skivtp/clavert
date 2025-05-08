@@ -35,12 +35,7 @@
   };
  / {
     behaviors {
-      rot_msc: rotary_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <5000>;
-                };
+      
         rush: rush {
             compatible = "zmk,behavior-tap-dance";
             label = "RUSH";
@@ -83,15 +78,15 @@
 // | LSHFT      | Z     | X    | C    | V   | B   | LtFN DEL | HOME      |  | PG_UP       | LtFN F12 | N   | M   | ,   | .   | /   | RSHFT |
 // | LtNUM LEFT | RIGHT | LALT | LGUI | SPACE     | BSPC     | LtNAV END |  | LtNAV PG_DN | DEL      | ENTER     | [   | ]   | UP  | DOWN  |
           bindings = <
-   &kp ESC   &kp N1   &kp N2   &kp N3 &kp N4   &kp N5                                          &kp N6  &kp N7 &kp N8    &kp N9   &kp N0   &kp BSPC
-   &kp TAB   &kp Q    &kp W    &kp E  &kp R    &kp T  &msc SCRL_UP                                   &kp DEL  &kp Y     &kp U  &kp I     &kp O    &kp P    &kp MINUS
-   &shiftcaps &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G  &msc SCRL_DOWN     &kp SPACE     &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
-   &kp LSHFT &kp Z    &kp X    &kp C  &kp V    &kp B  &mo 1     &mo 1                      &mo 1 &mo 2   &kp N     &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
-   &to 4     &kp LALT &kp LGUI  &mo 3      &kp DEL    &kp BSPC     &kp SPACE                       &kp RET  &kp SPACE       &kp ESC      &mo 3  &mo 4 &kp RET   &kp RET
+                                           
+   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
+   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
+                              &kp X           &kp C                                      &kp X           &kp C
           >;
 
-          sensor-bindings = <&rot_msc>;
-             // sensor-bindings = <&inc_dec_kp SCRL_UP SCRL_DOWN>;
+         
         };
 
         mac_layer {
@@ -102,14 +97,14 @@
 // | trans | trans | trans | trans | trans | trans | trans | trans |  | trans | trans | trans | trans | trans | trans | trans | trans |
 // | trans | trans | trans | LCTRL | trans         | trans | trans |  | trans | trans | trans         | trans | trans | trans | trans |
           bindings = <
-  &trans  &trans    &trans         &trans    &trans    &trans                                                                &trans          &trans    &trans    &trans    &trans      &trans
-  &kp N1   &kp N2   &trans         &kp EXCL     &kp AT     &kp HASH     &trans                                             &trans &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp N9    &kp N0      &kp DEL
-  &kp N4   &kp N5   &kp N3         &kp DLLR     &kp PRCNT  &kp CARET    &trans               &trans &kp DOLLAR       &kp PERCENT   &kp CARET    &kp N6    &kp KP_PLUS &kp KP_MINUS
-  &kp N7   &kp N8   &kp N6         &kp AMPS     &kp ASTRK  &trans   &trans &trans                                           &trans  &kp AMPERSAND    &kp ASTERISK  &trans    &kp N2    &kp N3    &kp RET     &kp RET
-  &trans   &kp N0   &kp N9         &trans          &trans        &trans &trans                                               &trans        &kp N0          &mo 3            &trans    &trans    &trans      &trans
-          >;
+   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
+   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
+                              &kp X           &kp C                                      &kp X           &kp C
+>;
 
-        sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+       
         };
 
         nav_layer {
@@ -120,14 +115,13 @@
 // | trans | trans  | trans  | trans  | trans  | trans | trans | trans |  | TgMAC | trans | trans  | trans | trans | trans  | trans  | trans  |
 // | trans | trans | trans | trans | trans        | trans | trans |  | trans | trans | trans        | trans | trans  | trans | trans |
           bindings = <
-   &trans  &trans     &trans   &trans   &kp LPAR   &kp RPAR                                                         &trans    &trans    &trans    &trans   &trans    &trans
-   &trans &trans  &trans  &trans  &kp MINUS &kp PLUS &trans                                                           &trans  &trans &trans &trans &trans &trans &trans
-   &trans   &trans &trans &trans &kp UP_ARROW &trans  &trans                                                           &trans  &trans &trans &trans &trans &trans &trans
-   &trans   &trans &trans  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW &trans &trans                       &trans &trans  &trans &trans &trans &trans &trans &trans
-   &trans  &trans    &trans   &trans        &trans         &trans  &trans                                        &trans &trans        &trans       &trans    &trans   &trans    &trans
+     &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
+   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
+                              &kp X           &kp C                                      &kp X           &kp C 
           >;
 
-          sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         num_layer {
@@ -138,14 +132,14 @@
 // | trans | trans | trans  | trans  | trans  | trans | trans | trans |  | trans | trans | trans  | 1       | 2   | 3   | ENTER | trans |
 // | trans | trans | trans | trans | trans        | trans | trans |  | trans | trans | trans           | 0   | .   | ENTER | trans |
           bindings = <
-     &kp F1  &kp F2     &kp F3       &kp F4       &kp F5           &kp F6                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11       &kp F12
-   &trans  &trans      &trans        &trans        &trans            &trans  &trans          &bt BT_CLR &trans &trans &trans &trans &trans   &trans 
-   &trans  &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &trans  &trans               &trans     &kp F1       &kp F2       &kp F3       &kp F4       &kp F5        &kp F6
-   &trans  &kp PSCRN  &kp PSCRN    &kp CLCK     &trans            &trans  &trans &trans &trans &trans     &kp F7       &kp F8       &kp F9       &kp F10      &kp F11       &kp F12
-   &trans  &trans     &trans       &trans              &trans           &trans &trans &trans &trans          &trans           &trans       &trans       &trans        &trans
+      &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
+   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
+                              &kp X           &kp C                                      &kp X           &kp C
           >;
 
-          sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+          
         };
 
         fn_layer {
@@ -156,14 +150,14 @@
 // | trans | trans | [     | ]     | trans  | bootloader | trans | trans |  | trans | trans | bootloader | trans   | trans   | trans    | trans | trans |
 // | trans | trans | trans | trans | trans              | trans | trans |  | trans | trans | trans               | REWIND | FASTFWR | trans | trans |
           bindings = <
-&kp ESC   &kp N1   &kp N2   &kp N3 &kp N4   &kp N5                                            &kp N6    &kp N7 &kp N8    &kp N9   &kp N0   &kp BSPC
-   &kp TAB   &kp Q    &kp W    &kp E  &kp R    &kp E  &kp F                                   &kp RPAR  &kp Y     &kp U  &kp I     &kp O    &kp P    &kp MINUS
-   &shiftcaps &kp LCTRL  &kp A  &kp W  &kp D  &kp LSHFT  &kp LBKT     &kp RBKT     &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
-   &kp LSHFT &kp Z    &kp X    &kp S  &kp V    &kp B  &kp M  &kp LCTRL                        &kp HOME &kp END   &kp N     &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT RET
-   &to 0     &kp LALT &kp LGUI  &mo 3      &kp LCTRL    &kp LSHFT    &kp SPACE                       &kp DEL  &kp SPACE       &mo 2      &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
+  &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
+   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
+                              &kp X           &kp C                                      &kp X           &kp C
           >;
 
-          sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+          
         };
     };
   };
