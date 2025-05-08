@@ -56,7 +56,7 @@
    &kp TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp X           &kp C                                      &kp X           &kp C
+                              &kp X           &kp SPACE                                      &kp X           &kp C
           >;
 
          
@@ -69,7 +69,7 @@
    &kp TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp X           &kp C                                      &kp X           &kp C
+                              &kp X           &kp SPACE                                     &kp X           &kp C
 >;
 
        
@@ -82,7 +82,7 @@
    &kp TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp X           &kp C                                      &kp X           &kp C 
+                              &kp X           &kp SPACE                                     &kp X           &kp C 
           >;
 
         };
@@ -94,7 +94,7 @@
    &kp TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp X           &kp C                                      &kp X           &kp C
+                              &kp X           &kp SPACE                                     &kp X           &kp C
           >;
 
           
@@ -107,7 +107,7 @@
    &kp TAB       &kp A  &kp S  &kp D  &kp F  &kp G       &kp H    &kp J  &kp K  &kp L  &kp SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
    &to 0      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp X           &kp C                                      &kp X           &kp C
+                              &kp LEFT_SHIFT           &kp SPACE                                      &kp X           &kp C
           >;
 
           
