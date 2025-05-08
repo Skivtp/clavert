@@ -1,11 +1,11 @@
 file_format: "1"
-id: clavert
-name: Clavert
+id: new_board
+name: new_board
 type: shield
 url: https://github.com/thlintw/clavert
 requires: [pro_micro]
 features:
   - keys
 siblings:
-  - clavert_left
-  - clavert_right
+  - new_board_left
+  - new_board_right
