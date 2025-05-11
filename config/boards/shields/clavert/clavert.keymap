@@ -52,11 +52,11 @@
 
           bindings = <
                                            
-   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
-   &kp TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
-   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
-   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp X           &kp SPACE                                      &kp X           &kp C
+   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T           &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &kp TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B           &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
+   &to 4      &kp LALT        &kp LGUI        &mo 2                                          &kp BACKSPACE  &kp DEL          &kp ESC      &mo 3  
+                              &mo 1           &kp SPACE                                      &kp RET &kp RET
           >;
 
          
@@ -65,11 +65,11 @@
         mac_layer {
 
           bindings = <
-   &kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
-   &kp TAB       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G       &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
-   &shiftcaps &kp Z           &kp X           &kp C        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
-   &to 4      &kp LALT        &kp LGUI        &mo 3                                      &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp X           &kp SPACE                                     &kp X           &kp C
+   &kp ESC    &kp Q           &kp W           &kp 1        &kp 2             &kp 3         &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &kp TAB    &kp A           &kp S           &kp 4         &kp 5            &kp 6         &kp H    &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON  &rush
+   &shiftcaps &kp Z           &kp X           &kp 7        &kp 8             &kp 9         &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
+   &to 4      &kp 0        &kp LGUI           &kp X                                        &kp BACKSPACE  &kp DEL          &kp ESC      &mo 3  
+                              &kp X           &kp SPACE                                    &kp RET &kp RET
 >;
 
        
@@ -103,11 +103,11 @@
         fn_layer {
 
           bindings = <
-   &kp ESC    &kp Q           &kp W           &kp F        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
+   &kp ESC    &kp Q           &kp F           &kp E        &kp R             &kp T       &kp Y    &kp U              &kp I        &kp O            &kp P                    &kp MINUS
    &kp TAB       &kp A  &kp A  &kp W  &kp D  &kp G       &kp H    &kp J  &kp K  &kp L  &kp SEMICOLON  &rush
    &shiftcaps &kp Z           &kp X           &kp S        &kp V             &kp B       &kp N    &kp M              &kp COMMA    &kp DOT          &kp FSLH                 &mt RSHFT RET
-   &to 0      &kp LALT        &kp E      &kp LEFT_SHIFT                                    &kp RET  &kp SPACE          &kp ESC      &mo 3  
-                              &kp LCTRL           &kp SPACE                                      &kp LCTRL         &kp SPACE 
+   &to 0      &kp LALT        &kp E      &kp LCTRL                                    &kp RET  &kp SPACE          &kp ESC      &mo 3  
+                              &kp LEFT_SHIFT          &kp SPACE                                      &kp LCTRL         &kp SPACE 
           >;
 
           
